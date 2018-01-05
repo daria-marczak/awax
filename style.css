@@ -353,13 +353,13 @@ header .circles .circle .full {
   padding-bottom: 0.85rem;
 }
 .price .row-four .box ul li:after {
-  display: block;
   content: "";
-  border-top: 0.5px solid #a3a3a3;
-  width: 10%;
-  transform: translateY(50rem);
-  transform: translateX(450%);
-  margin-bottom: 1rem;
+  display: block;
+  height: 1px;
+  width: 5%;
+  margin: 10px;
+  transform: translateX(850%);
+  background: lightgray;
 }
 .price .row-four .box .choose {
   color: white;
