@@ -11,80 +11,106 @@ body {
 }
 
 header {
+  background-image: url("https://i.imgur.com/MBgGzh4.jpg");
+  min-height: 100vh;
   background-color: black;
   color: white;
 }
-header .mobile-toggle {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
-}
-header .mobile-toggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
+header .hamburger {
   position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2;
-  -webkit-touch-callout: none;
+  width: 50px;
+  height: 45px;
+  top: 10px;
+  right: 20px;
+  z-index: 5;
 }
-header .mobile-toggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
+header .hamburger div {
   position: relative;
-  background: #cdcdcd;
+  width: 50px;
+  height: 5px;
   border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  background-color: #94a9ff;
+  margin-top: 7px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-header .mobile-toggle span::first-child {
-  transform-origin: 0% 0%;
+header #toggle {
+  display: none;
 }
-header .mobile-toggle span
-.mobile-toggle span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+header #toggle:checked + .hamburger .top {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: 22.5px;
 }
-header .mobile-toggle input:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+header #toggle:checked + .hamburger .meat {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: -5px;
 }
-header .mobile-toggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
+header #toggle:checked + .hamburger .bottom {
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
-header .mobile-toggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+header #toggle:checked + .hamburger + .nav {
+  top: 0;
 }
-header .navbar {
-  position: absolute;
+header .nav {
+  position: fixed;
   width: 100%;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: rgba(0, 0, 0, 0.6);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  height: 100%;
+  background-color: darkblue;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-header .navbar li {
-  padding: 10px 0;
-  font-size: 1.5rem;
+header .navbar .nav-wrapper {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
 }
-header .mobile-toggle input:checked ~ ul {
-  transform: none;
+header ul {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+header nav a {
+  margin-top: 1.25em;
+  color: #eee;
+  opacity: 0;
+  text-decoration: none;
+  font-size: 2.3em;
+  letter-spacing: 3px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+header nav a:first-child {
+  margin-top: 0;
+}
+header #toggle:checked + .hamburger + .nav .nav-wrapper nav a {
+  opacity: 0.9;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+header #toggle:checked + .hamburger + .nav .nav-wrapper nav a:hover {
+  opacity: 1;
+  color: white;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=style.css.map */
