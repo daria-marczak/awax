@@ -361,6 +361,9 @@ header .circles .circle .full {
   transform: translateX(850%);
   background: lightgray;
 }
+.price .row-four .box ul li:last-child:after {
+  display: none;
+}
 .price .row-four .box .choose {
   color: white;
   background-color: #373B3A;

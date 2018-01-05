@@ -422,6 +422,9 @@ header {
 						transform: translateX(850%);
 						background: lightgray;
 					}
+					&:last-child:after {
+						display: none;
+					}
 				}
 			}
 			.choose {
