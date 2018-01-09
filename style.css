@@ -57,13 +57,16 @@ header {
   background-image: url("https://i.imgur.com/MBgGzh4.jpg");
   min-height: 100vh;
   background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   color: white;
   /* JUMBOTRON */
 }
 header .logo img {
   width: 10%;
-  padding-left: 1rem;
+  padding-left: 85vw;
+  padding-top: 2rem;
 }
 header .sr-only {
   position: absolute;
@@ -77,13 +80,14 @@ header .sr-only {
 }
 header .menu-toggle {
   display: inline-block;
+  position: fixed;
   padding: .75em 15px;
   line-height: 1em;
-  font-size: 1em;
-  color: white;
+  font-size: 2.5em;
+  color: #B88B58;
 }
 header .menu-toggle:hover, header .menu-toggle:focus {
-  color: #b88b58;
+  color: #a3a3a3;
 }
 header .main-menu {
   position: absolute;
@@ -102,7 +106,7 @@ header .main-menu ul {
   -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
   box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
   min-height: 100%;
-  width: 200px;
+  min-width: 200px;
   background: #1a1a1a;
 }
 header .main-menu ul li:first-child a {
@@ -120,28 +124,25 @@ header .main-menu ul a {
   border-bottom: 1px solid #383838;
 }
 header .main-menu ul a:hover, header .main-menu ul a:focus {
-  background: #b88b58;
+  background: #B88B58;
 }
 header .main-menu .menu-close {
   position: absolute;
   right: 10px;
   top: 10px;
-  color: #b88b58;
+  color: #B88B58;
 }
-header .main-menu:target,
-header .main-menu[aria-expanded="true"] {
+header .main-menu:target, header .main-menu[aria-expanded="true"] {
   left: 0;
   outline: none;
   -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
   box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
 }
-header .main-menu:target .menu-close,
-header .main-menu[aria-expanded="true"] .menu-close {
+header .main-menu:target .menu-close, header .main-menu[aria-expanded="true"] .menu-close {
   z-index: 1001;
 }
-header .main-menu:target ul,
-header .main-menu[aria-expanded="true"] ul {
+header .main-menu:target ul, header .main-menu[aria-expanded="true"] ul {
   position: relative;
   z-index: 1000;
 }
@@ -163,26 +164,12 @@ header .jumbotron {
   text-align: center;
 }
 header .jumbotron .accent {
-  color: #b88b58;
-}
-header .circles {
-  padding-top: 2rem;
-}
-header .circles .circle {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  border: 1px solid #b88b58;
-  display: inline-block;
-  cursor: pointer;
-}
-header .circles .circle .full {
-  background-color: #b88b58;
+  color: #B88B58;
 }
 
 .button {
   padding: 0.95rem 2.5rem;
-  background-color: #b88b58;
+  background-color: #B88B58;
   border-radius: 25px;
   border: none;
   font-size: 0.875rem;
@@ -272,26 +259,39 @@ header .circles .circle .full {
   transition: 0.6s ease-in-out;
 }
 .team .media-square:hover {
-  background-color: #b88b58;
+  background-color: #B88B58;
 }
 
 /* CLIENTS SECTION*/
-.clients ul {
-  list-style: none;
+.clients .carousel {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.clients .carousel ul {
+  width: 450%;
+  margin: 0 auto;
   padding-left: 0;
+  list-style: none;
 }
-.clients ul li {
+.clients .carousel ul .slide {
+  margin-top: 2rem;
   margin-bottom: 1rem;
+  float: left;
 }
-.clients ul li h3 {
+.clients .carousel ul .slide img {
+  max-width: 150px;
+  max-height: 150px;
+}
+.clients .carousel ul .slide h3 {
   font-weight: 700;
   text-transform: capitalize;
 }
-.clients ul li .role {
+.clients .carousel ul .slide .role {
   display: block;
   font-weight: 600;
 }
-.clients ul li .quote {
+.clients .carousel ul .slide .quote {
   font-size: 7rem;
   line-height: 2rem;
   font-family: serif;
@@ -299,8 +299,22 @@ header .circles .circle .full {
   display: block;
   padding-top: 2rem;
 }
-.clients ul li .text {
+.clients .carousel ul .slide .text {
   padding-top: 0;
+}
+.clients .circles {
+  padding-top: 2rem;
+}
+.clients .circles .circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 1px solid #B88B58;
+  display: inline-block;
+  cursor: pointer;
+}
+.clients .circles .active {
+  background-color: #B88B58;
 }
 
 /* COMPANIES SECTION */
@@ -329,6 +343,7 @@ header .circles .circle .full {
 .price .row-four .box {
   background-color: white;
   padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 .price .row-four .box span {
   display: block;
@@ -348,9 +363,6 @@ header .circles .circle .full {
 .price .row-four .box ul {
   list-style: none;
   padding-left: 0;
-}
-.price .row-four .box ul li {
-  padding-bottom: 0.85rem;
 }
 .price .row-four .box ul li:after {
   content: "";
@@ -377,7 +389,7 @@ header .circles .circle .full {
 }
 .price .row-four .box .choose:hover {
   transform: scale(1.1);
-  background-color: #b88b58;
+  background-color: #B88B58;
 }
 
 /* PREMIUM SECTION */
@@ -397,6 +409,9 @@ header .circles .circle .full {
   content: url("https://i.imgur.com/KKmk9PU.png");
   text-indent: -1rem;
 }
+.premium ul li p {
+  text-indent: -4px;
+}
 .premium ul li ul {
   padding-left: 0;
 }
@@ -405,7 +420,7 @@ header .circles .circle .full {
   font-weight: 300;
 }
 .premium ul li ul li:before {
-  content: "-  ";
+  content: "- ";
   text-indent: -5px;
 }
 .premium .feature {
@@ -428,7 +443,7 @@ header .circles .circle .full {
 }
 .facts .number {
   font-weight: 700;
-  color: #b88b58;
+  color: #B88B58;
   font-size: 5rem;
   display: block;
 }
@@ -497,18 +512,12 @@ header .circles .circle .full {
   border: none;
   border-bottom: 2px solid #a3a3a3;
   background: transparent;
-}
-.contact form textarea,
-.contact form :-ms-input-placeholder,
-.contact form ::-moz-placeholder,
-.contact form :-moz-placeholder,
-.contact form ::-webkit-input-placeholder {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* MAP SECTION */
 .map {
-  background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=121+King+Street,+Melbourne+Victoria&zoom=16&scale=2&size=1640x300&maptype=roadmap&format=png&visual_refresh=true);
+  background-image: url("https://i.imgur.com/1IIZubh.png");
   width: 100%;
   background-repeat: no-repeat;
   filter: grayscale(100%);
@@ -518,13 +527,19 @@ header .circles .circle .full {
 .map .address {
   background: white;
   margin: 0 auto;
-  width: 70%;
+  width: 95%;
   padding: 1rem;
 }
 .map .address .list-item {
   display: block;
+  font-size: 0.65rem;
 }
-.map .address .list-item .circle {
+.map .address .list-item .square {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+}
+.map .address .list-item .square .circle {
   width: 2rem;
   height: 2rem;
   background: #aeaeae;
@@ -533,12 +548,9 @@ header .circles .circle .full {
   justify-content: center;
   align-items: center;
 }
-.map .address .list-item .circle img {
+.map .address .list-item .square .circle img {
   width: auto;
   height: 50%;
-}
-.map .address .list-item p {
-  display: inline-block;
 }
 
 /* FOOTER */
@@ -550,7 +562,7 @@ footer .up {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #b88b58;
+  background-color: #B88B58;
   margin: 0 auto;
   margin-top: -1.6rem;
   z-index: 99;
@@ -577,6 +589,7 @@ footer .column .media-square {
   height: 2rem;
   border-radius: 50%;
   display: inline-block;
+  margin-bottom: 0.5rem;
   border: none;
   color: white;
   cursor: pointer;
@@ -584,7 +597,7 @@ footer .column .media-square {
   transition: 0.6s ease-in-out;
 }
 footer .column .media-square:hover {
-  background-color: #b88b58;
+  background-color: #B88B58;
 }
 footer .column form {
   background: #5e5e5e;
@@ -597,94 +610,50 @@ footer .column form input {
   padding: 0.5rem 0.95rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  color: white;
+  text-align: center;
   padding-left: 0;
   border: none;
   border-bottom: 2px solid #a3a3a3;
   background: transparent;
 }
 footer .column form input::-webkit-input-placeholder {
-  color: white !important;
+  color: #a3a3a3 !important;
   font-family: "Montserrat", sans-serif;
 }
 footer .column form input:-moz-placeholder {
   /* Firefox 18- */
-  color: white !important;
+  color: #a3a3a3 !important;
   font-family: "Montserrat", sans-serif;
 }
 footer .column form input::-moz-placeholder {
   /* Firefox 19+ */
-  color: white !important;
+  color: #a3a3a3 !important;
   font-family: "Montserrat", sans-serif;
 }
 footer .column form input:-ms-input-placeholder {
-  color: white !important;
+  color: #a3a3a3 !important;
   font-family: "Montserrat", sans-serif;
 }
 
 /* MEDIA QUERIES FOR DESKTOP AND TABLETS */
 @media (min-width: 768px) {
-  .navbar {
-    padding: 20px;
-    display: flex;
-    align-items: baseline;
-    background-color: black;
+  header {
+    max-width: 100vw;
   }
-  .navbar img {
-    width: 100%;
+  header .logo {
+    max-width: 50%;
   }
-  .navbar .menu-toggle {
-    display: none;
-  }
-  .navbar .logo img {
-    width: 50%;
-  }
-
-  .main-menu {
-    position: relative;
-    left: 100%;
-    top: auto;
-    height: auto;
-  }
-  .main-menu .menu-close {
-    display: none;
-  }
-  .main-menu ul {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    height: auto;
-    width: 100%;
-    min-width: 5rem;
-    background: none;
-  }
-  .main-menu ul li a {
-    display: inline-block;
-    padding-top: 0;
-    color: white;
-    min-width: auto;
-    border: 0 !important;
-  }
-  .main-menu ul li a:hover, .main-menu ul li a:focus {
-    background: transparent;
-    border-bottom: 2px solid #b88b58;
-  }
-
-  .jumbotron h1 {
+  header .jumbotron h1 {
     margin-top: 15%;
     font-size: 4rem;
   }
-  .jumbotron .accent {
+  header .jumbotron .accent {
     display: block;
   }
-  .jumbotron .circles {
+  header .jumbotron .circles {
     padding-bottom: 1rem;
   }
-  .jumbotron button {
+  header .jumbotron button {
     display: block;
     margin: 0 auto;
   }
@@ -700,7 +669,7 @@ footer .column form input:-ms-input-placeholder {
 
   .row-four {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
   }
 
@@ -715,6 +684,9 @@ footer .column form input:-ms-input-placeholder {
   .services .column-services:first-child {
     border-left: 1px solid #a3a3a3;
   }
+  .services .column-services:nth-child(3) {
+    border-left: 1px solid #a3a3a3;
+  }
   .services .column-services p {
     color: #a3a3a3;
   }
@@ -722,7 +694,7 @@ footer .column form input:-ms-input-placeholder {
   /* PROJECTS SECTION */
   .projects .choice {
     margin: 0 auto;
-    width: 55%;
+    width: 90%;
     margin-top: 1rem;
     height: 3rem;
     margin-bottom: 2rem;
@@ -737,7 +709,157 @@ footer .column form input:-ms-input-placeholder {
     border-right: none;
   }
   .projects .choice a:hover {
-    border-bottom: 2px solid #b88b58;
+    border-bottom: 2px solid #B88B58;
+  }
+  .projects .layer h4 {
+    margin-bottom: 0.2rem;
+    padding-top: 1rem;
+  }
+  .projects button {
+    margin-top: 2rem;
+  }
+
+  /* CAROUSEL SECTION */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+  }
+  .cards .card {
+    margin-left: 1rem;
+  }
+  .cards .card:first-child {
+    margin-left: 0;
+  }
+
+  /* PRICES SECTION */
+  .price .row-four {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .media img, p {
+    display: inline-block;
+    padding-right: 1rem;
+  }
+
+  /* CONTACT SECTION*/
+  .contact .row-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+  }
+  .contact .row-two input {
+    width: 100%;
+  }
+
+  /* MAP SECTION */
+  .map .address {
+    width: 70%;
+  }
+  .map .address .list-item {
+    font-size: 1rem;
+  }
+
+  /* FOOTER SECTION */
+  footer .row-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+  footer .row-three .column:nth-child(2) {
+    font-size: 0.75rem;
+    color: #a3a3a3;
+  }
+  footer .awax {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 6rem;
+  }
+}
+/* FOR DESKTOP */
+@media (min-width: 1301px) {
+  .navbar {
+    display: flex;
+    align-items: baseline;
+    background-color: black;
+  }
+  .navbar .menu-toggle {
+    display: none;
+  }
+  .navbar .logo img {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 80%;
+  }
+
+  .main-menu {
+    position: initial;
+    right: 0;
+    left: 0 !important;
+    max-height: 3rem;
+    float: right;
+    max-width: 100vw;
+  }
+  .main-menu .menu-close {
+    display: none;
+  }
+  .main-menu ul {
+    display: flex;
+    align-content: flex-end;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    max-height: 2rem;
+    float: right;
+    padding-top: 1rem;
+    background-color: transparent !important;
+    min-width: 150%;
+    background: none;
+  }
+  .main-menu ul li a {
+    display: inline-block;
+    padding-top: 0;
+    color: white;
+    min-width: 3rem;
+    border: 0 !important;
+  }
+  .main-menu ul li a:hover, .main-menu ul li a:focus {
+    background: transparent;
+    border-bottom: 2px solid #B88B58;
+  }
+
+  .row-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .services .column-services:nth-child(3) {
+    border-left: none;
+  }
+
+  .projects .choice {
+    margin: 0 auto;
+    width: 65%;
+    margin-top: 1rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+  }
+  .projects .choice a {
+    min-width: 4rem;
+    display: inline-block;
+    border-bottom: none;
+    border-right: 1px solid lightgray;
+  }
+  .projects .choice a:last-child {
+    border-right: none;
+  }
+  .projects .choice a:hover {
+    border-bottom: 2px solid #B88B58;
   }
   .projects .image {
     position: relative;
@@ -786,22 +908,8 @@ footer .column form input:-ms-input-placeholder {
     position: absolute;
   }
 
-  /* CAROUSEL SECTION */
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    list-style: none;
-  }
-  .cards .card {
-    margin-left: 1rem;
-  }
-  .cards .card:first-child {
-    margin-left: 0;
-  }
-
-  /* PRICES SECTION */
   .price {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   .price .row-four {
     display: grid;
@@ -810,9 +918,11 @@ footer .column form input:-ms-input-placeholder {
     margin-top: 2rem;
   }
 
-  .media img, p {
-    display: inline-block;
-    padding-right: 1rem;
+  .facts p {
+    margin-top: 2.5rem;
+  }
+  .facts .longer {
+    margin-top: 0.75rem;
   }
 }
 

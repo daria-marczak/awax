@@ -6,6 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Awax</title>
       <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
    </head>
    <body>
       <header>
@@ -39,15 +40,15 @@
                <span class="fa fa-times" aria-hidden="true"></span>
                </a>
                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Our projects</a></li>
-                  <li><a href="#">Our team</a></li>
-                  <li><a href="#">Happy clients</a></li>
-                  <li><a href="#">Price</a></li>
-                  <li><a href="#">Some facts</a></li>
-                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#about">About us</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#projects">Our projects</a></li>
+                  <li><a href="#team">Our team</a></li>
+                  <li><a href="#clients">Happy clients</a></li>
+                  <li><a href="#price">Price</a></li>
+                  <li><a href="#facts">Some facts</a></li>
+                  <li><a href="#contact">Contact us</a></li>
                </ul>
             </nav>
             <a href="#main-menu-toggle"
@@ -62,16 +63,11 @@
                <h1>Design is about <span class="accent">communication</span></h1>
                <p class="lead">Call us +00 0 1234 5678</p>
                <button type="button" class="button">Get in touch!</button>
-               <div class="circles">
-                  <div class="circle full"></div>
-                  <div class="circle"></div>
-                  <div class="circle"></div>
-               </div>
             </div>
          </div>
       </header>
       <!-- ABOUT -->
-      <section class="about">
+      <section class="about" id="about">
          <div class="container">
             <h2>About us</h2>
             <span class="front-line">Who we are</span>
@@ -87,7 +83,7 @@
          </div>
       </section>
       <!-- SERVICES -->
-      <section class="services">
+      <section class="services" id="services">
          <div class="container">
             <h2>Services</h2>
             <span class="front-line">Services we provide</span>
@@ -116,21 +112,21 @@
          </div>
       </section>
       <!-- PROJECTS -->
-      <section class="projects">
+      <section class="projects" id="projects">
          <div class="container">
             <h2>Our projects</h2>
             <span class="front-line">What we create</span>
-            <div class="choice">
-               <a href="#">All</a>
-               <a href="#">Photos</a>
-               <a href="#">Branding</a>
-               <a href="#">Adverts</a>
-               <a href="#">Development</a>
-               <a href="#">Misc</a>
+            <div class="choice" id="choice">
+               <a href="#" class="btn active" onclick="filterSelection("all")">All</a>
+               <a href="#" class="btn" onclick="filterSelection("photos")">Photos</a>
+               <a href="#" class="btn" onclick="filterSelection("branding")">Branding</a>
+               <a href="#" class="btn" onclick="filterSelection("adverts")">Adverts</a>
+               <a href="#" class="btn" onclick="filterSelection("dev")">Development</a>
+               <a href="#" class="btn" onclick="filterSelection("misc")">Misc</a>
             </div>
             <div class="row-four">
                <div class="column">
-                  <div class="image">
+                  <div class="image misc-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -139,7 +135,7 @@
                      </div>
                      <img src="https://i.imgur.com/9HRCh6N.png" alt="music">	
                   </div>
-                  <div class="image">
+                  <div class="image photos-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -148,7 +144,7 @@
                      </div>
                      <img src="https://i.imgur.com/cg8HU3S.png" alt="guy">
                   </div>
-                  <div class="image">
+                  <div class="image branding-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -159,7 +155,7 @@
                   </div>
                </div>
                <div class="column">
-                  <div class="image">
+                  <div class="image photos-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -169,7 +165,7 @@
                      <img src="https://i.imgur.com/hKAfaLh.png" alt="model">
                   </div>
                   <div class="image">
-                     <div class="layer">
+                     <div class="layer dev-item">
                         <span>
                            <h4>About</h4>
                            <p>Lorem ipsum dolor sit amet consectetur.</p>
@@ -177,7 +173,7 @@
                      </div>
                      <img src="https://i.imgur.com/MlZOE17.png" alt="notepad">
                   </div>
-                  <div class="image">
+                  <div class="image adverts-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -188,7 +184,7 @@
                   </div>
                </div>
                <div class="column">
-                  <div class="image">
+                  <div class="image branding-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -197,7 +193,7 @@
                      </div>
                      <img src="https://i.imgur.com/chFJaN4.png" alt="wine">
                   </div>
-                  <div class="image">
+                  <div class="image photos-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -206,7 +202,7 @@
                      </div>
                      <img src="https://i.imgur.com/dzVhbrn.png" alt="photographer">
                   </div>
-                  <div class="image">
+                  <div class="image branding-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -217,7 +213,7 @@
                   </div>
                </div>
                <div class="column">
-                  <div class="image">
+                  <div class="image misc-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -226,7 +222,7 @@
                      </div>
                      <img src="https://i.imgur.com/V0HWwBA.png" alt="male model">
                   </div>
-                  <div class="image">
+                  <div class="image adverts-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -235,7 +231,7 @@
                      </div>
                      <img src="https://i.imgur.com/ufo7RaX.png" alt="bath">
                   </div>
-                  <div class="image">
+                  <div class="image adverts-item">
                      <div class="layer">
                         <span>
                            <h4>About</h4>
@@ -250,7 +246,7 @@
          </div>
       </section>
       <!-- TEAM !-->
-      <section class="team">
+      <section class="team" id="team">
          <div class="container">
             <h2>Our team</h2>
             <span class="front-line">Get behind the curtain</span>
@@ -323,13 +319,13 @@
          </div>
       </section>
       <!-- CLIENT OPINIONS -->
-      <section class="clients">
+      <section class="clients" id="clients">
          <div class="container">
             <h2>Happy clients</h2>
-            <span class="front-line">Our co-workers</span>
-            <div id="smallCarousel">
-               <ul class="clients">
-                  <li>
+            <span class="front-line">Who we worked for</span>
+            <div class="carousel">
+               <ul>
+                  <li class="slide active">
                      <img src="https://i.imgur.com/pR5HQ60.png" alt="John">
                      <div id="opinion">
                         <h3>John Doe</h3>
@@ -338,7 +334,7 @@
                         <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
                      </div>
                   </li>
-                  <li>
+                  <li class="slide">
                      <img src="https://i.imgur.com/X9JbAre.png" alt="John">
                      <div id="opinion">
                         <h3>Jane Doe</h3>
@@ -347,7 +343,7 @@
                         <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
                      </div>
                   </li>
-                  <li>
+                  <li class="slide">
                      <img src="https://i.imgur.com/pR5HQ60.png" alt="John">
                      <div id="opinion">
                         <h3>John Doe</h3>
@@ -358,10 +354,10 @@
                   </li>
                </ul>
             </div>
-            <div class="controls">
-               <div class="circle"></div>
-               <div class="circle"></div>
-               <div class="circle"></div>
+            <div class="circles">
+               <div class="circle" onclick="currentSlide(1)"></div>
+               <div class="circle" onclick="currentSlide(2)"></div>
+               <div class="circle" onclick="currentSlide(3)"></div>
             </div>
          </div>
       </section>
@@ -377,7 +373,7 @@
          </div>
       </section>
       <!-- PRICES -->
-      <section class="price">
+      <section class="price" id="price">
          <div class="container">
             <h2>Price</h2>
             <span class="front-line">Pricing table</span>
@@ -454,7 +450,7 @@
                   <ul class="features">
                      <li>
                         <span class="feature">First feature</span>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, deserunt.
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, deserunt.
                         <ul>
                            <li>Lorem, ipsum dolor.</li>
                            <li>Lorem, ipsum dolor.</li>
@@ -464,7 +460,7 @@
                      </li>
                      <li>
                         <span class="feature">Second feature</span>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, deserunt.
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, deserunt.
                         <ul>
                            <li>Lorem, ipsum dolor.</li>
                            <li>Lorem, ipsum dolor.</li>
@@ -474,7 +470,7 @@
                      </li>
                      <li>
                         <span class="feature">Third feature</span>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, deserunt.
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, deserunt.
                         <ul>
                            <li>Lorem, ipsum dolor.</li>
                            <li>Lorem, ipsum dolor.</li>
@@ -490,7 +486,7 @@
          </div>
       </section>
       <!-- FACTS -->
-      <section class="facts">
+      <section class="facts" id="facts">
          <div class="container">
             <h2>Some facts</h2>
             <span class="front-line">About our work</span>
@@ -498,7 +494,7 @@
                <div class="column">
                   <span class="number">1000</span>
                   <span class="title">Design projects released</span>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, voluptas.</p>
+                  <p class="longer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, voluptas.</p>
                </div>
                <div class="column">
                   <span class="number">900</span>
@@ -531,13 +527,15 @@
          </div>
       </section>
       <!-- CONTACT -->
-      <section class="contact">
+      <section class="contact" id="contact">
          <div class="container">
             <h2>Contact us</h2>
             <span class="front-line">Our agency located in Melbourne, Australia</span>
             <form>
-               <input type="text" placeholder="Name">
-               <input type="text" placeholder="Email">
+               <div class="row-two">
+                  <input type="text" placeholder="Name">
+                  <input type="text" placeholder="Email">
+               </div>
                <input type="text" placeholder="Subject">
                <textarea placeholder="Message"></textarea>
                <button type="button" class="button">Send message</button>
@@ -549,41 +547,51 @@
          <div class="container">
             <div class="address">
                <div class="list-item">
-                  <div class="circle">
-                     <img src="https://i.imgur.com/aaV40kt.png">
+                  <div class="square">
+                     <div class="circle">
+                        <img src="https://i.imgur.com/aaV40kt.png">
+                     </div>
                   </div>
-                  <p>PO Box 16122 Collins Street West Victoria 80007 Australia</p>
+                  <span>PO Box 16122 Collins Street West Victoria 80007 Australia</span>
                </div>
                <div class="list-item">
-                  <div class="circle">
-                     <img src="https://i.imgur.com/8HVzKR4.png">
+                  <div class="square">
+                     <div class="circle">
+                        <img src="https://i.imgur.com/8HVzKR4.png">
+                     </div>
                   </div>
-                  <p>121 King Street, Melbourne Victoria 3000 Australia</p>
+                  <span>121 King Street, Melbourne Victoria 3000 Australia</span>
                </div>
                <div class="list-item">
-                  <div class="circle">
-                     <img src="https://i.imgur.com/CufERjZ.png">
+                  <div class="square">
+                     <div class="circle">
+                        <img src="https://i.imgur.com/CufERjZ.png">
+                     </div>
                   </div>
-                  <p>+00 0 123 4567</p>
+                  <span>+00 0 123 4567</span>
                </div>
                <div class="list-item">
-                  <div class="circle">
-                     <img src="https://i.imgur.com/syp6aJG.png">
+                  <div class="square">
+                     <div class="circle">
+                        <img src="https://i.imgur.com/syp6aJG.png">
+                     </div>
                   </div>
-                  <p>bukindesign@gmail.com</p>
+                  <span>bukindesign@gmail.com</span>
                </div>
                <div class="list-item">
-                  <div class="circle">
-                     <img src="https://i.imgur.com/fGqQaUr.png">
+                  <div class="square">
+                     <div class="circle">
+                        <img src="https://i.imgur.com/fGqQaUr.png">
+                     </div>
                   </div>
-                  <p>www.envato.com</p>
+                  <span>www.envato.com</span>
                </div>
             </div>
          </div>
       </section>
       <!-- FOOTER -->
       <footer>
-         <button type="button" class="up"><img src="https://i.imgur.com/rvThmEY.png" alt="up"></button>
+         <button type="button" class="up" id="scrollToTop" onclick="scrollToTop(600,3);"><img src="https://i.imgur.com/rvThmEY.png" alt="up"></button>
          <div class="container">
             <div class="row-three">
                <div class="column">
@@ -597,7 +605,7 @@
                   <span class="awax">Awax 2016</span>
                </div>
                <div class="column">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, deleniti tempore. Sit voluptatum reprehenderit ut qui perspiciatis, praesentium voluptates ea quis distinctio voluptatibus aspernatur consectetur inventore ipsum iste fugit repellat perferendis hic laborum facilis quaerat? Corporis rem in dicta non voluptatibus recusandae ipsam inventore autem ut perferendis voluptate sint quod distinctio deleniti aspernatur ex, nesciunt, optio omnis at molestiae nisi ab provident? Magni in, culpa atque natus soluta expedita recusandae fugit eum quas eveniet hic impedit? Amet recusandae assumenda odit rerum sapiente sequi voluptas aspernatur natus dolor aliquam vero iusto totam facilis error veritatis quo animi, ipsa non repellendus nam! Facilis quis nulla blanditiis quibusdam alias ea ullam repudiandae deleniti vitae laborum nemo nisi error nam, cum quos. Nesciunt, voluptatibus? Iusto accusamus veniam totam reiciendis minima, quis distinctio est. Perspiciatis hic eligendi eum. Repellendus iste, autem adipisci nostrum porro nam ipsa iusto, similique numquam sequi mollitia, a cum nihil perferendis.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, deleniti tempore. Sit voluptatum reprehenderit ut qui perspiciatis, praesentium voluptates ea quis distinctio voluptatibus aspernatur consectetur inventore ipsum iste fugit repellat perferendis hic laborum facilis quaerat? Corporis rem in dicta non voluptatibus recusandae ipsam inventore autem ut perferendis voluptate sint quod distinctio deleniti aspernatur ex.
                </div>
                <div class="column">
                   <form>
@@ -609,5 +617,6 @@
          </div>
       </footer>
       <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+      <script type="text/javascript" src="scrollTop.js"></script>
    </body>
 </html>
