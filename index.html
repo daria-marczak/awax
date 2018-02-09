@@ -6,7 +6,8 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Awax</title>
       <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+      <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
    </head>
    <body>
       <header>
@@ -123,7 +124,8 @@
                <a href="#" class="btn" onclick="filterSelection("adverts")">Adverts</a>
                <a href="#" class="btn" onclick="filterSelection("dev")">Development</a>
                <a href="#" class="btn" onclick="filterSelection("misc")">Misc</a>
-            </div>
+            
+			 </div>
             <div class="row-four">
                <div class="column">
                   <div class="image misc-item">
@@ -323,42 +325,41 @@
          <div class="container">
             <h2>Happy clients</h2>
             <span class="front-line">Who we worked for</span>
-            <div class="carousel">
-               <ul>
-                  <li class="slide active">
-                     <img src="https://i.imgur.com/pR5HQ60.png" alt="John">
-                     <div id="opinion">
-                        <h3>John Doe</h3>
-                        <span class="role">Head of PR Department</span>
-                        <span class="quote">“</span>
-                        <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
-                     </div>
-                  </li>
-                  <li class="slide">
-                     <img src="https://i.imgur.com/X9JbAre.png" alt="John">
-                     <div id="opinion">
-                        <h3>Jane Doe</h3>
-                        <span class="role">Head of PR Department</span>
-                        <span class="quote">“</span>
-                        <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
-                     </div>
-                  </li>
-                  <li class="slide">
-                     <img src="https://i.imgur.com/pR5HQ60.png" alt="John">
-                     <div id="opinion">
-                        <h3>John Doe</h3>
-                        <span class="role">Head of PR Department</span>
-                        <span class="quote">“</span>
-                        <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
-                     </div>
-                  </li>
-               </ul>
-            </div>
-            <div class="circles">
-               <div class="circle" onclick="currentSlide(1)"></div>
-               <div class="circle" onclick="currentSlide(2)"></div>
-               <div class="circle" onclick="currentSlide(3)"></div>
-            </div>
+            <div class="slider">
+				<div class="slide-viewer">
+				   <div class="slide-group">
+				      <div class="slide">
+				         <img src="https://i.imgur.com/pR5HQ60.png" alt="John">
+				         <div id="opinion">
+				            <h3>John Doe</h3>
+				            <span class="role">Head of PR Department</span>
+				            <span class="quote">“</span>
+				            <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
+				         </div>
+				      </div>
+				      <div class="slide">
+				         <img src="https://i.imgur.com/X9JbAre.png" alt="John">
+				         <div id="opinion">
+				            <h3>Jane Doe</h3>
+				            <span class="role">Head of PR Department</span>
+				            <span class="quote">“</span>
+				            <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
+				         </div>
+				      </div>
+				      <div class="slide">
+				         <img src="https://i.imgur.com/pR5HQ60.png" alt="John">
+				         <div id="opinion">
+				            <h3>John Doe</h3>
+				            <span class="role">Head of PR Department</span>
+				            <span class="quote">“</span>
+				            <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore doloribus, quia necessitatibus mollitia eligendi numquam modi eos eaque dignissimos.</span>
+				         </div>
+				      </div>
+				   </div>
+				   
+				</div>
+				<div class="slide_buttons"></div>
+			</div>
          </div>
       </section>
       <!-- COMPANIES -->
@@ -437,6 +438,7 @@
             </div>
          </div>
       </section>
+      
       <!-- PREMIUM -->
       <section class="premium">
          <div class="container">
@@ -532,9 +534,9 @@
             <h2>Contact us</h2>
             <span class="front-line">Our agency located in Melbourne, Australia</span>
             <form>
-               <div class="row-two">
-                  <input type="text" placeholder="Name">
-                  <input type="text" placeholder="Email">
+            	<div class="row-two">
+	               <input type="text" placeholder="Name">
+	               <input type="text" placeholder="Email">
                </div>
                <input type="text" placeholder="Subject">
                <textarea placeholder="Message"></textarea>
@@ -543,46 +545,48 @@
          </div>
       </section>
       <!-- MAP -->
-      <section class="map">
+      <section class="map" id="map">
+      	<div id="mapGoogle">
+      	</div>
          <div class="container">
             <div class="address">
                <div class="list-item">
-                  <div class="square">
-                     <div class="circle">
-                        <img src="https://i.imgur.com/aaV40kt.png">
-                     </div>
+               <div class="square">
+                  <div class="circle">
+                     <img src="https://i.imgur.com/aaV40kt.png">
+                  </div>
                   </div>
                   <span>PO Box 16122 Collins Street West Victoria 80007 Australia</span>
                </div>
                <div class="list-item">
-                  <div class="square">
-                     <div class="circle">
-                        <img src="https://i.imgur.com/8HVzKR4.png">
-                     </div>
+               <div class="square">
+                  <div class="circle">
+                     <img src="https://i.imgur.com/8HVzKR4.png">
+                  </div>
                   </div>
                   <span>121 King Street, Melbourne Victoria 3000 Australia</span>
                </div>
                <div class="list-item">
-                  <div class="square">
-                     <div class="circle">
-                        <img src="https://i.imgur.com/CufERjZ.png">
-                     </div>
+               		<div class="square">
+	                  <div class="circle">
+	                     <img src="https://i.imgur.com/CufERjZ.png">
+	                  </div>
                   </div>
                   <span>+00 0 123 4567</span>
                </div>
                <div class="list-item">
-                  <div class="square">
-                     <div class="circle">
-                        <img src="https://i.imgur.com/syp6aJG.png">
+               <div class="square">
+                  <div class="circle">
+                     <img src="https://i.imgur.com/syp6aJG.png">
                      </div>
                   </div>
                   <span>bukindesign@gmail.com</span>
                </div>
                <div class="list-item">
-                  <div class="square">
-                     <div class="circle">
-                        <img src="https://i.imgur.com/fGqQaUr.png">
-                     </div>
+               <div class="square">
+                  <div class="circle">
+                     <img src="https://i.imgur.com/fGqQaUr.png">
+                  </div>
                   </div>
                   <span>www.envato.com</span>
                </div>
@@ -617,6 +621,12 @@
          </div>
       </footer>
       <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script type="text/javascript" src="map.js"></script>
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGyj8rAXt8h_o_P9NZb5BeUK9RTzYiBoM&callback=initMap"></script>
       <script type="text/javascript" src="scrollTop.js"></script>
+      <script type="text/javascript" src="carousel.js"></script>
+      
    </body>
 </html>
