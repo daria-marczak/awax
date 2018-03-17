@@ -639,7 +639,7 @@ header .jumbotron .accent {
 .map #mapGoogle {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
-  min-height: 70vh;
+  min-height: 150vh;
   z-index: 1;
 }
 
